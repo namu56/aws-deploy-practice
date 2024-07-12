@@ -9,6 +9,11 @@ export const createApp = (client: RedisClient) => {
 
   app.use(express.json());
 
+  app.get('/crash', () => {
+    console.log('crashing server!');
+    process.exit();
+  });
+
   app.get('/', (request, response) => {
     response
       .status(200)

@@ -1,10 +1,10 @@
 config:
-  target: http://localhost:4000
+  target: https://ingame-todo.com
   phases:
     - duration: 5
-      arrivalRate: 1000
+      arrivalRate: 30
 
 scenarios:
   - flow:
       - get:
-          url: '/messages'
+          url: '/fibonacci/35'

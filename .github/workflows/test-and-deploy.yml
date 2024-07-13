@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - main
+env:
+  AWS_REGION: ap-northeast-2
+  ECR_REPOSITORY: aws-deploy-practice
+  ECS_SERVICE: express-service
+  ECS_CLUSTER: my-express-cluster
+  ECS_TASK_DEFINITION: ./task_definition.json
+  CONTAINER_NAME: express
 
 permissions:
   id-token: write
@@ -15,6 +22,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Build and test with Docker Compose
         run: docker-compose -f docker-compose.test.yml up --build --abort-on-container-exit
 

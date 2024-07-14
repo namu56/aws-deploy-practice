@@ -1,5 +1,4 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:590183723709:task-definition/my-express:5",
   "containerDefinitions": [
     {
       "name": "express",
@@ -50,38 +49,7 @@
   "family": "my-express",
   "executionRoleArn": "arn:aws:iam::590183723709:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
-  "revision": 5,
   "volumes": [],
-  "status": "ACTIVE",
-  "requiresAttributes": [
-    {
-      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-    },
-    {
-      "name": "ecs.capability.execution-role-awslogs"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.ecr-auth"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-    },
-    {
-      "name": "ecs.capability.secrets.asm.environment-variables"
-    },
-    {
-      "name": "ecs.capability.execution-role-ecr-pull"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-    },
-    {
-      "name": "ecs.capability.task-eni"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
-    }
-  ],
   "placementConstraints": [],
   "compatibilities": ["EC2", "FARGATE"],
   "requiresCompatibilities": ["FARGATE"],
@@ -91,7 +59,5 @@
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "registeredAt": "2024-07-12T08:10:46.003Z",
-  "registeredBy": "arn:aws:iam::590183723709:root",
   "tags": []
 }
